@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  rlcraft:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+    environment:
+      VERSION: 1.12.2
+      EULA: "TRUE"
+      TYPE: "FORGE"
+      FORGEVERSION: 14.23.5.2838
+      MEMORY: "4G"
+      GENERIC_PACK: https://media.forgecdn.net/files/2836/138/RLCraft+Server+Pack+1.12.2+-+Beta+v2.8.1.zip 
+      GENERIC_PACK_STRIP_DIRS: "0"
+    volumes:
+      - ./data:/data
